@@ -641,7 +641,7 @@ Skills
   margin-bottom: 1.25rem;
 }
 .skill p {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: var(--clr-primary-1);
 }
 .skill-container {
@@ -669,7 +669,7 @@ Skills
 .value-40 {
   width: 40%;
 }
-.value-80{
+.value-80 {
   width: 80%;
 }
 
@@ -759,7 +759,6 @@ Blog
 */
 .blog {
   background: var(--clr-grey-10);
-
 }
 .card {
   height: 27rem;
@@ -775,21 +774,57 @@ Blog
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: var(--radius);
 }
 .card-front {
-  background: red;
+  background: var(--clr-white);
   transition: all 1s ease-in-out;
 }
 .card-back {
-  background: yellow;
+  background: var(--clr-primary-10);
   transform: rotateY(180deg);
   transition: all 1s ease-in-out;
+  position: relative;
+  display: grid;
+  place-items: center;
 }
 .card:hover .card-front {
   transform: rotateY(-180deg);
 }
 .card:hover .card-back {
   transform: rotateY(0);
+}
+/* Non-animated card styles */
+.card-info {
+  padding: 1rem 1.5rem;
+}
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.card-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.card-footer p {
+  margin-bottom: 0;
+  justify-self: end;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 3rem 1rem;
 }
 /*
 =============== 
